@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+    <script src="https://get.mavo.io/mavo.js"></script>
+    <title>Mavo getting started</title>
+  </head>
+  <body>
+
+    <style>
+        .answerContainer{
+            width: 12rem;
+            margin-top: 10px;
+            font-size: 2rem;
+            padding: 2rem;
+            background: forestgreen;
+            color: #f4f4f4;
+        }
+    </style>
+    <div mv-app="mavoTestim">
+      <h1>Hey mavos,</h1>
+      <p>Lets do some calculations...</p>
+      <form>
+        <input type="text" property="input1" />
+        <select name="" id="" property="sign">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="text" property="input2" />
+        <div class="answerContainer">
+        <div mv-if="sign = '+'">
+            <p>[input1] + [input2] = </p>
+            <p> [input1 + input2]</p>
+        </div>
+        <div mv-if="sign = '-'">
+            <p>[input1] - [input2] = </p>
+            <p>[Number(input1) - input2]</p>
+        </div>
+        <div mv-if="sign = '*'">
+            <p>[input1] * [input2] = </p>
+            <p>[input1 * input2]</p>
+        </div>
+        <div mv-if="sign = '/'">
+            <p>[input1] / [input2] = </p>
+            <p>[Number(input1) / input2]</p>
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
